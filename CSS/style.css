@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'New Tegomin', serif;
+    background: rgb(218, 229, 231);
+    background: linear-gradient(90deg, rgb(211, 220, 221) 46%, rgb(169, 195, 201) 100%);
+   
+}
+
+
+h1{
+    text-align: center;
+    color: rgba(13, 41, 53, 0.76);
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-size: 65px;
+    margin: 20px;
+}
+h2{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    letter-spacing: 1px;
+    font-weight: 1;
+    margin-bottom: 25px;
+    color: rgba(26, 88, 112, 0.76)
+}
+ul li {
+    font-family: Garamond, serif;
+    color: rgba(37, 136, 175, 0.76)
+}
+main{
+    margin: 25px;   
+}
+footer{
+    position: relative;
+    bottom: 1px;
+    color: rgba(14, 52, 66, 0.76)
+}

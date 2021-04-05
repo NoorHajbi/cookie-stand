@@ -37,3 +37,20 @@ footer{
     bottom: 1px;
     color: rgba(14, 52, 66, 0.76)
 }
+tfoot td,td {
+    border: .1px solid black;
+}
+table{
+    text-align: center;
+    margin-left: 60px;
+}
+tr th {
+    border: black;
+    width: 60px;
+}
+tr td{
+    width: 60px;
+}
+img{
+    margin-left: 30%;
+}

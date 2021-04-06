@@ -18,6 +18,57 @@ h1{
     font-size: 65px;
     margin: 20px;
 }
+/******Index.html***********/
+.PageHead{
+    
+    margin-left: 30%;
+}
+.PageHead h1{
+    display: inline-block;
+}
+.PagesNav{
+    display: inline-block;
+    margin-left: 15em; 
+}
+
+.PagesNav a{
+    color: rgb(218, 229, 231);;
+    background-color: rgba(13, 41, 53, 0.76);
+    border-radius: 20%;
+    padding: 7px;
+    text-decoration: none;
+    vertical-align:text-top;
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-size: 25px;
+    transition: .350ms;
+}
+.PagesNav a:hover{
+    transform: scale(1.2);
+    padding: 8px;
+    background-color: rgba(20, 64, 83, 0.76);
+    border-radius: 20%;
+}
+
+div.gallery {
+    margin: 5px;
+    padding: 10px;
+    float: left;
+    margin-left: 40px;
+  }
+  
+  div.gallery img {
+    width: 280px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 10%;
+    transition: .350ms;
+}
+div.gallery img:hover{
+    transform: scale(1.1);
+    border-radius: 20%;
+}
+/********************/
 h2{
     font-family: Comic Sans MS, Comic Sans, cursive;
     letter-spacing: 1px;
@@ -32,8 +83,18 @@ ul li {
 main{
     margin: 25px;   
 }
+
+main img{
+    transition: .350ms;
+}
+main img:hover{
+    transform: scale(1.1);
+}
+
 footer{
+    clear: both;
     position: relative;
+    text-align: center;
     bottom: 1px;
     color: rgba(14, 52, 66, 0.76)
 }
@@ -43,6 +104,10 @@ tfoot th,td {
 table{
     text-align: center;
     margin-left: 60px;
+    transition: .350ms;
+}
+table:hover{
+    transform: scale(1.01);
 }
 tr th {
     border: black;
@@ -50,6 +115,10 @@ tr th {
 }
 tr td{
     width: 60px;
+    transition: .350ms;
+}
+tr td:hover{
+    transform: scale(1.1);
 }
 img{
     margin-left: 30%;

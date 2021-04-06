@@ -1,12 +1,11 @@
 'use strict';
 const hours = ['6am','7am', '8am', '9am', '10am' , '11am', '12pm','1pm','2pm', '3pm', '4pm','5pm','6pm','7pm'];
 const firstCol = ['Seattle','Tokyo','Dubai','Paris','Lima'];//5
-//create the table element globally outside of any function because you only have 1 table for all the shops
 let salmonCookies =[];
 let wrapper=document.getElementById('wrapper');
 let tableElement=document.createElement('table');
 wrapper.appendChild(tableElement);
-//header footer fun + render method
+//let totalTotals=0; //2nd way
 
 function SalmonCookies(minCustomers, maxCustomers, avgCookies) {
 
@@ -23,6 +22,7 @@ SalmonCookies.prototype.cookiesPerHour=function () {
     let customersPerHour = Math.ceil(randomNumber(this.minCustomers,this.maxCustomers) * this.avgCookies); //ceil almost like floor
     this.cookiesEachHour.push(customersPerHour);
     this.total+= customersPerHour;
+  //  totalTotals+=customersPerHour; //2nd way
   }
 };
 
@@ -67,7 +67,7 @@ function tHeader() {
   txt.textContent = 'Daily Location Total';
 }
 
-//making the table cells outline and the rendering part
+/** Render **/
 function render(){
   tHeader();
   for(let row=0; row<salmonCookies.length; row++){
@@ -91,12 +91,23 @@ function render(){
 }
 function tFooter() {
   let totalTotals=0;
-  let totalHour=0;
   let tFooter = document.createElement('tfoot');
   tableElement.appendChild(tFooter);
-  let footerTxt = document.createElement('td');
+  let footerTxt = document.createElement('th');
   tFooter.appendChild(footerTxt);
   footerTxt.textContent = 'Totals';
+  for(let row=0; row<hours.length;row++){
+    let totalHour=0;
+    for(let col=0; col<salmonCookies.length;col++){
+      totalHour+= salmonCookies[col].cookiesEachHour[row];
+      totalTotals+= salmonCookies[col].cookiesEachHour[row];
+    }
+    let footerTh= document.createElement('th');
+    tFooter.appendChild(footerTh);
+    footerTh.textContent=totalHour;
+  }
+  let totalTh= document.createElement('th');
+  tFooter.appendChild(totalTh);
+  totalTh.textContent=totalTotals;
 }
 render();
-

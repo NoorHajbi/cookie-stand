@@ -37,7 +37,7 @@ footer{
     bottom: 1px;
     color: rgba(14, 52, 66, 0.76)
 }
-tfoot td,td {
+tfoot th,td {
     border: .1px solid black;
 }
 table{

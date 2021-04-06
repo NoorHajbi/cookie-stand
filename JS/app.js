@@ -14,7 +14,6 @@ function SalmonCookies(name,minCustomers, maxCustomers, avgCookies) {
   this.avgCookies = avgCookies;
   this.cookiesEachHour = []; //use this
   this.cookiesPerHour = this.cookiesPerHour();
-  this.renderFun = [];
   this.total = 0;
   salmonCookies.push(this); //push every obj so, length=5(locations)
   this.render = this.render();
@@ -27,10 +26,9 @@ SalmonCookies.prototype.cookiesPerHour=function () {
   //  totalTotals+=customersPerHour; //2nd way
   }
 };
-/** Render prototype that call header&footer functions also implement a table body**/
+/** Render prototype that implement a table body**/
 tHeader();
 SalmonCookies.prototype.render=function () {
-  //for(let row=0; row<salmonCookies.length; row++){
   let totalL =0;
   let rowData = document.createElement('tr');
   tableElement.appendChild(rowData);
@@ -46,8 +44,6 @@ SalmonCookies.prototype.render=function () {
   let dailyTotal=document.createElement('td');
   rowData.appendChild(dailyTotal);
   dailyTotal.textContent=totalL;
-  // }
-
 };
 
 
@@ -73,6 +69,7 @@ function render(){
   }
   tFooter();
 }*/
+
 /** Seattle**/
 let seattle  = new SalmonCookies('seattle',23,65,6.3);
 console.log(seattle );
@@ -135,5 +132,4 @@ function tFooter() {
   tFooter.appendChild(totalTh);
   totalTh.textContent=totalTotals;
 }
-//render();
 tFooter();

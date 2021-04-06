@@ -67,7 +67,7 @@ function tHeader() {
   txt.textContent = 'Daily Location Total';
 }
 
-//making the table cells outline and the rendering part
+/** Render **/
 function render(){
   tHeader();
   for(let row=0; row<salmonCookies.length; row++){

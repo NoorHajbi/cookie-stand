@@ -71,23 +71,23 @@ function render(){
 }*/
 
 /** Seattle**/
-let seattle  = new SalmonCookies('seattle',23,65,6.3);
+let seattle  = new SalmonCookies('Seattle',23,65,6.3);
 console.log(seattle );
 
 /** Tokyo **/
-let tokyo = new SalmonCookies('tokyo',3,24,1.2);
+let tokyo = new SalmonCookies('Tokyo',3,24,1.2);
 console.log(tokyo);
 
 /** Dubai**/
-let dubai = new SalmonCookies('dubai',11,38,3.7);
+let dubai = new SalmonCookies('Dubai',11,38,3.7);
 console.log(dubai);
 
 /** Paris **/
-let paris = new SalmonCookies('paris',20,38,2.3);
+let paris = new SalmonCookies('Paris',20,38,2.3);
 console.log(paris);
 
 /** Lima **/
-let lima = new SalmonCookies('lima',2,16,4.6);
+let lima = new SalmonCookies('Lima',2,16,4.6);
 console.log(lima);
 
 /** Random **/

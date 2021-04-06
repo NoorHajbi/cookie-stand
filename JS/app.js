@@ -102,12 +102,12 @@ function tFooter() {
       totalHour+= salmonCookies[col].cookiesEachHour[row];
       totalTotals+= salmonCookies[col].cookiesEachHour[row];
     }
-    let footerTh= document.createElement('th');
-    tFooter.appendChild(footerTh);
-    footerTh.textContent=totalHour;
+    let footerData= document.createElement('th');
+    tFooter.appendChild(footerData);
+    footerData.textContent=totalHour;
   }
-  let totalTh= document.createElement('th');
-  tFooter.appendChild(totalTh);
-  totalTh.textContent=totalTotals;
+  let totalData= document.createElement('th');
+  tFooter.appendChild(totalData);
+  totalData.textContent=totalTotals;
 }
 render();

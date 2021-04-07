@@ -111,12 +111,13 @@ function tHeader() {
   txt.textContent = 'Daily Location Total';
 }
 
+let footerT= '';
 function tFooter() {
   let totalTotals=0;
-  let tFooter = document.createElement('tfoot');
-  tableElement.appendChild(tFooter);
+  let tFoot = document.createElement('tfoot');
+  tableElement.appendChild(tFoot);
   let footerTxt = document.createElement('th');
-  tFooter.appendChild(footerTxt);
+  tFoot.appendChild(footerTxt);
   footerTxt.textContent = 'Totals';
   for(let row=0; row<hours.length;row++){
     let totalHour=0;
@@ -125,11 +126,29 @@ function tFooter() {
       totalTotals+= salmonCookies[col].cookiesEachHour[row];
     }
     let footerTh= document.createElement('th');
-    tFooter.appendChild(footerTh);
+    tFoot.appendChild(footerTh);
     footerTh.textContent=totalHour;
   }
   let totalTh= document.createElement('th');
-  tFooter.appendChild(totalTh);
+  tFoot.appendChild(totalTh);
   totalTh.textContent=totalTotals;
+  footerT= tFoot;
+
+}
+
+let cookieForm=document.getElementById('cookieForm');
+cookieForm.addEventListener('submit',formSubmit);
+function formSubmit(event){
+  event.preventDefault();
+  let name= event.target.name.value;
+  let min =parseInt(event.target.min.value) ;
+  let max =parseInt(event.target.max.value );
+  let avg=parseFloat( event.target.avg.value);
+  let added=new SalmonCookies(name,max,min,avg);
+  added.cookiesEachHour;
+  footerT.textContent='';
+  tFooter();
+  //console.log('Form Submit: ',added) ;
 }
 tFooter();
+

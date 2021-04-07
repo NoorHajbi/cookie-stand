@@ -9,16 +9,56 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+
     <header class="PageHead"><h1>Salmon Cookies</h1> 
         <div class="PagesNav"> <a href="index.html">Home</a></div>
+        <div class="Salmon">
+            <img src="img/logo.png" height="100px" width="300px"/>
+           </div>
+        <form action="" id="cookieForm">
+            <fieldset>
+            <div class="LocName">
+              <label for="name">Location Name:</label>
+              <input type="text" id="name" name="name" required minlength="3" maxlength="20" autocomplete="off">
+              <br>
+              <br>
+            </div>
+              <label for="min">Min:</label>
+              <input type="number" name="min" id="min" required min="1" max="200"> 
+    
+              <br>
+              <br>
+    
+              <label for="max">Max:</label>
+              <input type="number" name="max" id="max" required min="1" max="1000">
+
+              <br>
+              <br>
+    
+              <label for="avg">Average: </label>
+              <input type="number" step="0.01" name="avg" id="avg" required min="1" max="10">
+    
+    
+              <br>
+              <br>
+              <div class="Submit">
+              <input type="Submit">
+            </div>
+    
+            </fieldset>
+          </form>
     </header>  
     <main>
-        <img src="img/logo.png" height="160px"/>
+        
+        
         <div id="wrapper">
             <!-- generated code -->
+ 
+        
          </div>
+         
     </main>
-    <footer>Lab: 06 - Get started on the Salmon Cookies project &copy; Noor Hajbi 04/04/2021</footer>
+    <footer>Get started on the Salmon Cookies project &copy; Noor Hajbi 04/04/2021</footer>
     <script src="JS/app.js"></script>
 </body>
 </html>

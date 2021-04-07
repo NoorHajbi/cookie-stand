@@ -16,19 +16,18 @@ h1{
     letter-spacing: 2px;
     font-weight: 100;
     font-size: 65px;
-    margin: 20px;
+    margin-top: 20px;
 }
 /******Index.html***********/
-.PageHead{
-    
-    margin-left: 30%;
-}
+
 .PageHead h1{
     display: inline-block;
+    margin-left: 30%;
 }
 .PagesNav{
     display: inline-block;
     margin-left: 15em; 
+    margin-bottom: 60px;
 }
 
 .PagesNav a{
@@ -54,7 +53,7 @@ div.gallery {
     margin: 5px;
     padding: 10px;
     float: left;
-    margin-left: 40px;
+    margin-left: 80px;
   }
   
   div.gallery img {
@@ -69,6 +68,7 @@ div.gallery img:hover{
     border-radius: 20%;
 }
 /********************/
+/*
 h2{
     font-family: Comic Sans MS, Comic Sans, cursive;
     letter-spacing: 1px;
@@ -76,6 +76,7 @@ h2{
     margin-bottom: 25px;
     color: rgba(26, 88, 112, 0.76)
 }
+*/
 ul li {
     font-family: Garamond, serif;
     color: rgba(37, 136, 175, 0.76)
@@ -120,6 +121,76 @@ tr td{
 tr td:hover{
     transform: scale(1.1);
 }
-img{
-    margin-left: 30%;
+
+/*
+table,tr,th,td{
+    border-collapse: collapse;
+  }*/
+
+/***Form*/
+.LocName{
+    margin-top: 30px;
 }
+label{
+    margin-left: 25em;
+}
+.Submit input{
+    float: left;
+    margin-left: 45em;
+    width:5em;
+    height: 1.9em;
+    margin-bottom: 25px;
+    background-image: linear-gradient(90deg, rgb(235, 228, 236) 46%, rgb(196, 202, 238) 100%);
+    transition: .350ms;
+    font-weight: bold;
+    border-color: rgb(186, 130, 238);
+}
+.Submit input:hover{
+    transform: scale(1.08);
+}
+input{
+    position: relative;
+    background-image: linear-gradient(90deg, rgb(237, 214, 241) 46%, rgb(207, 238, 236) 100%);
+    float: right;
+    margin-right: 45%;
+    width: 14em;
+}
+input:invalid {
+    box-shadow: 0 0 5px 1px blueviolet;
+  }
+  
+  input:invalid:required {
+    border-color:  violet;
+     outline: none;
+  }
+.Salmon{
+
+    position: relative;
+  animation: myfish 5s 2;
+  animation-direction: alternate;
+  margin-left: 500px;
+  margin-bottom: 50px;
+}
+
+@keyframes myfish {
+    0%   { margin-left: 0px; left: 0; bottom: 0px;}
+    5%  { left:50px; bottom: 5px;}
+    10%  { left:100px; bottom: 10px;}
+    15%  { left:150px; bottom: 15px;}
+    20%  {left: 200px; bottom: 20px;}
+    25%  { left:250px; bottom: 25px;}
+    30%  {left: 300px; bottom: 30px;}
+    35%  { left:350px; bottom: 35px;}
+    40%  {left: 400px; bottom: 40px;}
+    45%  { left:450px; bottom: 45px;}
+    50%  {left: 500px; bottom: 50px;}
+    55%  { left:550px; bottom: 45px;}
+    60%  {left: 600px; bottom: 40px;}
+    65%  { left:650px; bottom: 35px;}
+    70%  {left: 700px; bottom: 30px;}
+    75%  {left: 750px; bottom: 25px;}
+    80%  {left: 800px; bottom: 20px;}
+    100% {left: 0; bottom: 0px;}
+
+
+  }

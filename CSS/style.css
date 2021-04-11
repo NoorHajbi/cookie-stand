@@ -98,6 +98,9 @@ table{
     text-align: center;
     margin-left: 60px;
     transition: .350ms;
+    background: linear-gradient(90deg, rgb(203, 219, 221) 46%, rgb(161, 193, 201) 100%);
+   
+    
 }
 table:hover{
     transform: scale(1.01);
@@ -106,9 +109,15 @@ tr th {
     border: black;
     width: 60px;
 }
+tr td:first-child{
+    font-family: 'New Tegomin', serif;
+}
 tr td{
     width: 60px;
     transition: .350ms;
+    font-family: 'Times New Roman', serif;
+    color: rgb(32, 29, 29);
+    letter-spacing: 1px;
 }
 tr td:hover{
     transform: scale(1.1);
@@ -120,6 +129,8 @@ table,tr,th,td{
   }*/
 
 /***Form*/
+/*fieldset { border:0px;}*/
+
 .LocName{
     margin-top: 30px;
 }

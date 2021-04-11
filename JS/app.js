@@ -30,7 +30,7 @@ SalmonCookies.prototype.cookiesPerHour=function () {
 tHeader();
 let totalL =0;
 SalmonCookies.prototype.render=function () {
-  
+
   let rowData = document.createElement('tr');
   tableElement.appendChild(rowData);
   let locationName=document.createElement('td');

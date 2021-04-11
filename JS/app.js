@@ -28,8 +28,9 @@ SalmonCookies.prototype.cookiesPerHour=function () {
 };
 /** Render prototype that implement a table body**/
 tHeader();
+let totalL =0;
 SalmonCookies.prototype.render=function () {
-  let totalL =0;
+  
   let rowData = document.createElement('tr');
   tableElement.appendChild(rowData);
   let locationName=document.createElement('td');
@@ -46,29 +47,8 @@ SalmonCookies.prototype.render=function () {
   dailyTotal.textContent=totalL;
 };
 
+console.log(totalL);
 
-/*
-function render(){
-  tHeader();
-  for(let row=0; row<salmonCookies.length; row++){
-    let totalL =0;
-    let rowData = document.createElement('tr');
-    tableElement.appendChild(rowData);
-    let locationName=document.createElement('td');
-    rowData.appendChild(locationName);
-    locationName.textContent=firstCol[row];
-    for(let col=0;col<hours.length;col++){
-      let cellData=document.createElement('td');
-      rowData.appendChild(cellData);
-      cellData.textContent=salmonCookies[row].cookiesEachHour[col];
-      totalL+=parseInt(salmonCookies[row].cookiesEachHour[col]);
-    }
-    let dailyTotal=document.createElement('td');
-    rowData.appendChild(dailyTotal);
-    dailyTotal.textContent=totalL;
-  }
-  tFooter();
-}*/
 
 /** Seattle**/
 let seattle  = new SalmonCookies('Seattle',23,65,6.3);

@@ -30,7 +30,7 @@ SalmonCookies.prototype.cookiesPerHour=function () {
 tHeader();
 let totalL =0;
 SalmonCookies.prototype.render=function () {
-
+  let totalDaily=0;
   let rowData = document.createElement('tr');
   tableElement.appendChild(rowData);
   let locationName=document.createElement('td');
@@ -40,13 +40,13 @@ SalmonCookies.prototype.render=function () {
     let cellData=document.createElement('td');
     rowData.appendChild(cellData);
     cellData.textContent=this.cookiesEachHour[col];
-    totalL+=parseInt(this.cookiesEachHour[col]);
+    totalDaily+=parseInt(this.cookiesEachHour[col]);
   }
   let dailyTotal=document.createElement('td');
   rowData.appendChild(dailyTotal);
-  dailyTotal.textContent=totalL;
+  dailyTotal.textContent=totalDaily;
+  totalL = totalDaily;
 };
-
 console.log(totalL);
 
 
